@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 
+import 'CreateEventPage.dart';
 import 'EventDetailsPage.dart';
 import 'MyEventsPage.dart';
 import 'ProfilePage.dart';
@@ -142,6 +143,17 @@ class EventSearchPage extends StatelessWidget {
             ),
           ],
         ),
+      ),
+      floatingActionButton: FloatingActionButton(
+        onPressed: () {
+          // Navigate to Create Event Page
+          Navigator.push(
+            context,
+            MaterialPageRoute(builder: (context) => CreateEventPage()),
+          );
+        },
+        backgroundColor: Colors.blue[900],
+        child: const Icon(Icons.add, color: Colors.white),
       ),
     );
   }
